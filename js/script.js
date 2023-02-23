@@ -1,5 +1,5 @@
 function startModal(classModal) {
-  const modal = document.querySelector('.popup');
+  const modal = document.querySelector('.popup'); //pega o conteudo da classe popup
   modal.classList.add('display');
   modal.addEventListener("click", function (evt) {
     if (
@@ -25,16 +25,16 @@ function editProfile(evt) {
   const title = document.querySelector('.profile__author');
   const subtitle = document.querySelector('.profile__subtitle');
   const nameInput = document.querySelector('.popup__input_name');
-  const aboutInput = document.querySelector('popup__input_about');
+  const aboutInput = document.querySelector('.popup__input_about');
 
 
 
-  //const nameValue = nameInput.value;
-  //const aboutValue = aboutInput.value;
+  const nameValue = nameInput.value;
+  const aboutValue = aboutInput.value;
 
-  //title.textContent = nameValue;
-  //subtitle.textContent =  aboutValue;
+  title.textContent = nameValue;
+  subtitle.textContent =  aboutValue;
 }
 
 
-formElement.addEventListener('submit', handleProfileFormSubmit);
+formElement.addEventListener('submit', editProfile);
