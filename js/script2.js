@@ -22,8 +22,8 @@ const formElement = document.querySelector('.popup__form');
 function editProfile(evt) {
   evt.preventDefault();
 
-  //const title = document.querySelector('profile__author');
-  //const subtitle = document.querySelector('.profile__subtitle');
+  const title = document.querySelector('.profile__author');
+  const subtitle = document.querySelector('.profile__subtitle');
   const nameInput = document.querySelector('.popup__input_name');
   const aboutInput = document.querySelector('popup__input_about');
 

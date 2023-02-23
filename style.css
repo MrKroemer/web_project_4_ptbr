@@ -60,7 +60,6 @@
 .profile__subtitle{
   grid-area: 'subtitle';
   margin: 0;
-  cursor: pointer;
   max-width: 61px;
 }
 
@@ -340,7 +339,7 @@
   font-style: normal;
   font-weight: 900;
   line-height: 1.2;
-  padding-left: 36px;
+  padding: 22px 22px 0;
   margin: 0;
 }
 
@@ -376,7 +375,6 @@
   }
 
   .profile__author{
-    display: flex;
     margin: 0 auto 3px;
   }
 
@@ -416,7 +414,6 @@
   .profile__subtitle{
     grid-area: 'subtitle';
     margin: 0 0 19px;
-    cursor: pointer;
     max-width: 61px;
   }
 
@@ -438,23 +435,17 @@
 }
 
 @media screen and (max-width: 713px){
-  .profile{
+  /* .profile{
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+  } */
 
   .profile__image{
     max-width: 127px;
     border-radius: 100%;
     padding: 16px;
     margin: 36px 0 0 0;
-  }
-
-  .profile__content-description{
-    display: flex;
-    flex-direction: column;
-    max-width: 737px;
   }
 
   .profile__description{
@@ -470,7 +461,8 @@
   .profile__author{
     font-weight: normal;
     grid-area: 'author';
-    margin-top: 27px;
+    margin-top: 13px;
+    margin-left: 19px;
     margin-bottom: 0;
     font-size: 33px;
     line-height: 94%;
@@ -483,7 +475,7 @@
     width: 24px;
     height: 24px;
     border: 1px solid #fff;
-    margin: 38px 0 0 0;
+    margin: 14px 0 0 6px;
     cursor: pointer;
   }
 
@@ -494,7 +486,7 @@
     border: 1px solid #fff;
     width: 225px;
     height: 50px;
-    margin: 34px 0 0 13%;
+    margin: 41px 34px 0;
     font-size: 31px;
     cursor: pointer;
     
@@ -502,14 +494,56 @@
 
   .profile__subtitle{
     position: relative;
-    bottom: 82px;
-    left: 230px;
-    margin: 0 0 20px;
-    cursor: pointer;
+    bottom: 99px;
+    left: 226px;
+    margin: 17px 0 -5px;
     max-width: 61px;
+  }
+
+  .popup__container{
+    width: 58%;
+  }
+  .popup__close{
+    right: 1%;
+    top: -54px;
+  }
+
+  .popup__save{
+    width: 328px;
+    margin-left: 47px;
+  }
+
+}
+
+@media screen and (max-width: 685px){
+  .popup__name{
+    width: 290px;
+  }
+
+  .popup__about{
+    width: 290px;
+  }
+
+  .popup__save {
+    width: 258px;
+    margin-left: 46px;
   }
 }
 
+@media screen and (max-width: 566px){
+  .popup__name{
+    width: 230px;
+  }
+
+  .popup__about{
+    width: 230px;
+  }
+
+  .popup__save {
+    width: 207px;
+    margin-left: 47px;
+}
+}
 
 @media screen and (max-width: 528px){
   .header-container__title{
@@ -528,19 +562,58 @@
     margin: 0;
   }
 
+    .profile__author{
+      margin-top: 13px;
+      margin-left: -1px;
+      font-size: 30px;
+      width: 229px;
+    }
+
+  .profile__image{
+    margin: 0;
+  }
+
   .profile__content-description {
+    /* display: flex;
+    flex-direction: column; */
+    width: 366px;
+  }
+
+  /* .profile__description{
     display: flex;
     flex-direction: column;
-    width: 522px;
-  }
+    align-items: center;
+    margin: auto;
+  } */
 
-  .profile__description{
-    margin: auto 20%;
-  }
-
+    .profile__button{
+      margin: 41px 34px 0 -8px;
+    }
   #canvas{
-    margin: 38px 0 0 10px;
+    position: relative;
+    bottom: 26px;
+    left: 2px;
+    margin: 38px 0 0 0;
   }
+
+  .profile__subtitle{
+    position: relative;
+    bottom: 107px;
+    left: 146px;
+    margin: 58px 0 -44;
+    max-width: 61px;
+  }
+.popup__title{
+  font-size: 20px;
+}
+  .popup__name{
+    width: 223px;
+  }
+
+  .popup__about{
+    width: 223px;
+  }
+
 }
 
 @media screen and (max-width: 443px){
@@ -565,16 +638,17 @@
     grid-template-areas:
         'author square'
         'buttonPlus buttonPlus';
-    width: 57%;
+    width: 85%;
     margin: auto 10%;
   }
 
   .profile__author {
     font-weight: normal;
     grid-area: 'author';
-    margin-top: 27px;
+    margin-top: 3px;
     margin-bottom: 0;
-    font-size: 33px;
+    margin-left: 5px;
+    font-size: 30px;
     line-height: 94%;
     vertical-align: top;
     width: 249px;
@@ -582,26 +656,67 @@
 
   #canvas {
     grid-area: 'square';
+    left: -14px;
+    bottom: 37px;
     width: 24px;
     height: 24px;
     border: 1px solid #fff;
-    margin: 38px 0 0 11px;
+    margin: 38px 0 0 0;
     cursor: pointer;
   }
 
   .profile__subtitle {
     position: relative;
-    bottom: 82px;
-    left: 152px;
+    bottom: 107px;
+    left: 124px;
     margin: 0 0 20px;
-    cursor: pointer;
     max-width: 61px;
+  }
+  .profile__button{
+    grid-area: buttonPlus;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #fff;
+    width: 225px;
+    height: 50px;
+    margin: 34px 0 0 7%;
+    font-size: 31px;
+    cursor: pointer;
   }
 
   .profile__content-description {
-    display: flex;
-    flex-direction: column;
-    width: 375px;
+    width: 319px;
   }
 
+  .popup__name{
+    width: 152px;
+  }
+
+  .popup__about{
+    width: 152px;
+  }
+
+  .popup__save {
+    width: 150px;
+    margin-left: 47px;
+  }
 }
+
+  @media screen and (max-width: 320px){
+    .popup__name{
+      margin-left: 17px;
+      font-size: 10px;
+    }
+
+    .popup__about{
+      margin-left: 17px;
+      font-size: 10px;
+    }
+    
+    .popup__save {
+      margin-left: 18px;
+    }
+
+  }
+
+
