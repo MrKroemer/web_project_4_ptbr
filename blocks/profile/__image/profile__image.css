@@ -1,0 +1,5 @@
+.profile__image {
+    max-width: 127px;
+    border-radius: 100%;
+    padding: 16px;
+  }

@@ -1,16 +1,22 @@
 function startModal(classModal) {
-  const modal = document.querySelector('.popup'); //pega o conteudo da classe popup
+  const modal = document.querySelector('.popup');
   modal.classList.add('display');
   modal.addEventListener("click", function (evt) {
     if (
       evt.target.id == classModal ||
-      evt.target.className == 'popup__close' ||
-      evt.target.className == 'popup__salvar'
+      evt.target.id == 'save' ||
+      evt.target.className == 'popup__close'
     ) {
       modal.classList.remove('display');
     }
   });
 }
+ 
+const liked = document.querySelector('.cards__like');
+liked.addEventListener('click', function(){
+  liked.style.backgroundColor = "#000";
+});
+
 
 const button = document.querySelector('.profile__edit');
 button.addEventListener('click', function () {

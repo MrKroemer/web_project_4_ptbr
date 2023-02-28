@@ -1,0 +1,48 @@
+.popup__save{
+    width: 358px;
+    height: 50px;
+    margin: 48px 36px 36px;
+    background-color: #000;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .popup__save:hover{
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 713px){
+    .popup__save{
+      width: 328px;
+      margin-left: 47px;
+    }
+  }
+
+  @media screen and (max-width: 685px){
+    .popup__save {
+      width: 258px;
+      margin-left: 46px;
+    }
+  }
+  
+  @media screen and (max-width: 566px){
+    .popup__save {
+      width: 207px;
+      margin-left: 47px;
+   }
+  }
+
+  @media screen and (max-width: 443px){
+  .popup__save {
+    width: 150px;
+    margin-left: 47px;
+  }
+}
+  
+@media screen and (max-width: 320px){
+  .popup__save {
+    margin-left: 18px;
+  }
+
+}

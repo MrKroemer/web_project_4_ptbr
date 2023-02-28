@@ -1,0 +1,7 @@
+.cards__like-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 880px;
+    height: 79px;
+  }

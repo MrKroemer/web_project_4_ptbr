@@ -1,0 +1,23 @@
+.profile__author {
+    font-weight: normal;
+    margin: 0;
+    padding-top: 55px;
+    font-size: 42px;
+    line-height: 94%;
+    vertical-align: top;
+    width: 328px;
+  }
+
+  @media screen and (max-width: 995px){
+    .profile__author{
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 713px){
+      .profile__author{     
+      font-size: 33px;
+      width: 249px;
+    }
+  }
+

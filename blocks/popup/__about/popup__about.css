@@ -1,0 +1,51 @@
+.popup__about{
+    border: 0;
+    width: 358px;
+    height: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+    opacity: 0.5;
+    margin-left: 36px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+    padding: 0;
+    margin-top: 50px;
+  }
+  
+  .popup__about:focus{
+    outline-color: gray;
+  }
+
+
+@media screen and (max-width: 685px){
+  .popup__about{
+    width: 290px;
+  }
+}
+
+@media screen and (max-width: 566px){
+  .popup__about{
+    width: 230px;
+  }
+}
+
+@media screen and (max-width: 528px){
+  .popup__about{
+    width: 223px;
+  }
+}
+
+@media screen and (max-width: 443px){
+  .popup__about{
+    width: 152px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .popup__about{
+    margin-left: 17px;
+    font-size: 10px;
+  }
+}
