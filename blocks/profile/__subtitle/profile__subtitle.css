@@ -1,15 +1,8 @@
 .profile__subtitle{
     margin: 0;
-    max-width: 61px;
+    
   }
   
   .profile__subtitle:hover{
     opacity: 0.5;
   }
-
-  @media screen and (max-width: 713px){
-  .profile__subtitle{
-   padding-top: 12px;
-    max-width: 61px;
-  }
-}
