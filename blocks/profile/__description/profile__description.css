@@ -9,7 +9,7 @@
     row-gap: min(
       16px,
       calc(0.36vw + 12.86px)
-    ); 
+    );
     column-gap: min(
       18px,
       calc(1.43vw + 5.43px)
