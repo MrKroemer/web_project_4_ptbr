@@ -1,0 +1,14 @@
+* {
+    max-width: 880px;
+    margin: 0 auto; 
+    padding: 0;
+    background-color: #000000;
+    list-style: none; 
+    border: none;
+    font-family: "Inter", Arial, sans-serif; 
+  }
+  
+  button {
+    background-color: transparent;
+  }
+  

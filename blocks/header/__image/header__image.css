@@ -1,0 +1,17 @@
+.header__image {
+    margin: 0; 
+  
+    width: min(
+      173px,
+      calc(8.39vw + 99.14px)
+    );
+  }
+  
+  @media screen and (max-width: 880px) {
+    .header__image {
+      margin-left: calc(
+        -4.82vw + 42.43px
+      ); 
+    }
+  }
+  

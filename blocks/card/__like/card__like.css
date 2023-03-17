@@ -1,0 +1,19 @@
+.card__like {
+    background-color: transparent;
+    border: transparent;
+    margin: 0px;
+    position: absolute;
+    right: 18px;
+    bottom: 30px;
+    cursor: pointer;
+    transition: opacity linear 0.5s;
+  }
+  
+  .card__like:hover {
+    opacity: 0.5;
+  }
+  
+  .card__like_clicked {
+    background-image: url(../../../images/love-button-black.svg);
+  }
+  
