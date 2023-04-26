@@ -1,75 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./vendor/normalize.css">
-  <link rel="stylesheet" href="./pages/index.css">
-  <title>Around the USA</title>
-</head>
-<body class="root">
-  <header class="header">
-    <img src="./images/__image.svg" alt="Logo" class="header__image">
-  </header>
-  <section class="profile">
-    <img src="./images/FB_IMG.png" alt="Imagem de perfil" class="profile__picture">
-    <div class="profile__description"> <!-- profile__info-->
-      <h2 class="profile__name">Rodents Group</h2>
-      <h3 class="profile__about">Fotógrafo</h3> <!--profile__about-me-->
-      <button><img src="./images/edit_button.svg" alt="Editar" class="profile__edit-button"></button>
-    </div>
-    <button class="profile__add-button"><img src="./images/plus-sign.svg" alt="Adicionar novo perfil" class="profile__plus-sign"></button>
-  </section>
-  <ul class="cards"></ul> <!-- posts -->
-  <footer class="footer">
-    <p class="footer__copyright">&copy; 2023 Around The U.S.</p> <!--footer__author-->
-  </footer>
-  <template id="card"> <!-- post -->
-    <li class="card"> <!-- post class -->
-      <img src=" " alt=" " class="card__image"> <!-- post__image-->
-      <h3 class="card__description"></h3> <!-- post__description -->
-      <button><img src="./images/delete-button.svg" alt="Deletar" class="card__delete"></button> <!-- post__delete-button-->
-      <button><img src="./images/love-button.svg" alt="Adicionar" class="card__like"></button> <!--post__like-button-->
-    </li>
-  </template>
-  <div class="popup" id="profile-form">
-    <div class="popup__overlay"></div>
-    <form class="popup__form">
-      <button><img src="./images/close-icon.svg" alt="Fechar" class="popup__close"></button>
-      <div class="popup__inputs">
-        <h3 class="popup__title">Editar perfil</h3>
-        <input id="name-input" class="popup__input" placeholder="Nome" required minlength="2" maxlength="40">
-        <span class="popup__error name-input-error"></span>
-        <input id="about-input" class="popup__input" placeholder="Sobre mim" required minlength="2" maxlength="200"> <!--ID => about-me-input-->
-        <span class="popup__error about-input-error"></span> <!-- ID => about-me-input-error-->
-        <button type="submit" class="popup__button">Salvar</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./vendor/normalize.css" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Around the USA</title>
+  </head>
+
+  <body class="root">
+    <header class="header">
+      <img src="./images/__image.svg" alt="Logo" class="header__image" />
+    </header>
+    <section class="profile">
+      <img
+        src="./images/FB_IMG.png"
+        alt="Imagem de perfil"
+        class="profile__picture"
+      />
+      <div class="profile__description">
+        <h2 class="profile__name">Rodents Group</h2>
+        <h3 class="profile__about">Fotógrafo</h3>
+        <button>
+          <img
+            src="./images/edit_button.svg"
+            alt="Editar"
+            class="profile__edit-button"
+          />
+        </button>
       </div>
-    </form>
-  </div>
-  <div id="card-form" class="popup">
-    <div class="popup__overlay"></div>
-    <form class="popup__form">
-      <button><img src="./images/close-icon.svg" alt="Fechar" class="popup__close"></button> <!--popup__close-button-->
-      <div class="popup__inputs">
-        <h3 class="popup__title">Novo local</h3>
-        <input id="title-input" class="popup__input" placeholder="Título" required minlength="2" maxlength="30">
-        <span class="popup__error title-input-error"></span>
-        <input type="url" id="image-link-input" class="popup__input" placeholder="Endereço da imagem" required>
-        <span class="popup__error image-link-input-error"></span>
-        <button type="submit" class="popup__button">Salvar</button>
-      </div>
-    </form>
-  </div>
-  <div id="image-zoom" class="popup">
-    <div class="popup__overlay"></div>
-    <div class="popup__zoom">
-      <button><img src="./images/close-icon.svg" alt="Fechar" class="popup__close popup__close_zoom"></button> <!--popup__close-button  popup__close-button_zoom-->
-      <img src=" " alt=" " class="popup__image">
-      <h3 class="popup__description"></h3>
+      <button class="profile__add-button">
+        <img
+          src="./images/plus-sign.svg"
+          alt="Adicionar novo perfil"
+          class="profile__plus-sign"
+        />
+      </button>
+    </section>
+    <ul class="cards"></ul>
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2023 Around The U.S.</p>
+    </footer>
+    <template id="card">
+      <li class="card">
+        <img src=" " alt=" " class="card__image" />
+        <h3 class="card__description"></h3>
+        <button>
+          <img
+            src="./images/delete-button.svg"
+            alt="Deletar"
+            class="card__delete"
+          />
+        </button>
+
+        <button>
+          <img
+            src="./images/love-button.svg"
+            alt="Adicionar"
+            class="card__like"
+          />
+        </button>
+      </li>
+    </template>
+    <div class="popup" id="profile-form">
+      <div class="popup__overlay"></div>
+      <form class="popup__form">
+        <button>
+          <img
+            src="./images/close-icon.svg"
+            alt="Fechar"
+            class="popup__close"
+          />
+        </button>
+        <div class="popup__inputs">
+          <h3 class="popup__title">Editar perfil</h3>
+          <input
+            id="name-input"
+            class="popup__input"
+            placeholder="Nome"
+            required
+            minlength="2"
+            maxlength="40"
+          />
+          <span class="popup__error name-input-error"></span>
+          <input
+            id="about-input"
+            class="popup__input"
+            placeholder="Sobre mim"
+            required
+            minlength="2"
+            maxlength="200"
+          />
+
+          <span class="popup__error about-input-error"></span>
+          <button type="submit" class="popup__button">Salvar</button>
+        </div>
+      </form>
     </div>
-  </div>
-  <script src="./scripts/script.js"></script>
-  <script src="./scripts/validation.js"></script>
-</body>
+    <div id="card-form" class="popup">
+      <div class="popup__overlay"></div>
+      <form class="popup__form">
+        <button>
+          <img
+            src="./images/close-icon.svg"
+            alt="Fechar"
+            class="popup__close"
+          />
+        </button>
+        <div class="popup__inputs">
+          <h3 class="popup__title">Novo local</h3>
+          <input
+            id="title-input"
+            class="popup__input"
+            placeholder="Título"
+            required
+            minlength="2"
+            maxlength="30"
+          />
+          <span class="popup__error title-input-error"></span>
+          <input
+            type="url"
+            id="image-link-input"
+            class="popup__input"
+            placeholder="Endereço da imagem"
+            required
+          />
+          <span class="popup__error image-link-input-error"></span>
+          <button type="submit" class="popup__button">Salvar</button>
+        </div>
+      </form>
+    </div>
+    <div id="image-zoom" class="popup">
+      <div class="popup__overlay"></div>
+      <div class="popup__zoom">
+        <button>
+          <img
+            src="./images/close-icon.svg"
+            alt="Fechar"
+            class="popup__close popup__close_zoom"
+          />
+        </button>
+
+        <img src=" " alt=" " class="popup__image" />
+        <h3 class="popup__description"></h3>
+      </div>
+    </div>
+    <script type="'module" src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/utils.js"></script>
+    <script type="module" src="./scripts/FormValidator.js"></script>
+    <script type="module" src="./scripts/FormValidator.js"></script>
+  </body>
 </html>
